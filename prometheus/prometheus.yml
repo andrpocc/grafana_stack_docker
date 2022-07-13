@@ -1,0 +1,7 @@
+scrape_configs:
+  - job_name: stability
+    scrape_interval: 5s
+    metrics_path: \
+    scheme: http
+    static_configs:
+    - targets: ['87.239.108.254:8000']
