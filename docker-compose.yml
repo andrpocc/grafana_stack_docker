@@ -9,7 +9,7 @@ services:
     command:
       - --config.file=/etc/prometheus/prometheus.yml
     ports:
-      - 9090:9090
+      - 9492:9090
     restart: unless-stopped
 
   grafana:
@@ -18,7 +18,7 @@ services:
     depends_on:
       - prometheus
     ports:
-      - 3000:80
+      - 80:3000
     volumes:
       - ./grafana:/var/lib/grafana
       - ./grafana/provisioning/:/etc/grafana/provisioning/
