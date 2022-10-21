@@ -5,3 +5,8 @@ scrape_configs:
     scheme: http
     static_configs:
     - targets: ['87.239.108.254:8000']
+  - job_name: api.prin.ru
+    scrape_interval: 10s
+    scheme: http
+    static_configs:
+    - targets: ['api.prin.ru:8080']
